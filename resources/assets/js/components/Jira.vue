@@ -7,7 +7,7 @@
                 <li v-for="issue in issues">
                     <span class="jira__key">{{ issue.key }}</span>
 
-                    {{ issue.fields.summary }}
+                    {{ issue.summary }}
                 </li>
             </ul>
         </section>
