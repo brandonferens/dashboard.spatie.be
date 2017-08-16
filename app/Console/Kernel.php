@@ -32,7 +32,5 @@ class Kernel extends ConsoleKernel
         $schedule->command('dashboard:fetch-current-track')->everyMinute();
         $schedule->command('dashboard:send-heartbeat')->everyMinute();
         $schedule->command('dashboard:fetch-issues')->everyFiveMinutes();
-        $schedule->command('dashboard:fetch-github-totals')->everyThirtyMinutes();
-        $schedule->command('dashboard:fetch-packagist-totals')->hourly();
     }
 }
