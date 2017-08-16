@@ -4,22 +4,26 @@
 
 @javascript(compact('pusherKey', 'pusherCluster', 'usingNodeServer'))
 
-<dashboard id="dashboard" columns="5" rows="3">
-    <twitter :initial-tweets="{{ json_encode($initialTweets) }}" position="a1:a3"></twitter>
-    <calendar position="b1:b2"></calendar>
-    <music position="c1:d1"></music>
-    <uptime position="b3"></uptime>
+<dashboard id="dashboard" columns="4" rows="3">
+    <calendar position="a1:a2"></calendar>
+    <music position="b1:c1"></music>
+    <uptime position="a3"></uptime>
 
-    <tasks team-member="alex" position="c2"></tasks>
-    <tasks team-member="freek" position="d2"></tasks>
-    <tasks team-member="seb" position="c3"></tasks>
-    <tasks team-member="willem" position="d3"></tasks>
+    <!-- <tasks team-member="alex" position="b2"></tasks> -->
+    <!-- <tasks team-member="freek" position="c2"></tasks> -->
+    <!-- <tasks team-member="seb" position="b3"></tasks> -->
+    <!-- <tasks team-member="willem" position="c3"></tasks> -->
 
-    <time-weather position="e1" date-format="ddd DD/MM"></time-weather>
-    <packagist position="e2"></packagist>
-    <github position="e3"></github>
+    <jira team-member="brandon" position="b2"></jira>
+    <jira team-member="robin" position="c2"></jira>
+    <jira team-member="dustin" position="b3"></jira>
+    <jira team-member="eric" position="c3"></jira>
 
-    <internet-connection></internet-connection>
+    <time-weather position="d1" date-format="ddd M/D"></time-weather>
+    <time-weather position="d2" date-format="ddd M/D" city="San Diego"></time-weather>
+    <time-weather position="d3" date-format="ddd M/D" city="Kona" timezone="America/Adak"></time-weather>
+
+    <!-- <internet-connection></internet-connection> -->
 </dashboard>
 
 @endsection

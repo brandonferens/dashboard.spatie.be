@@ -7,6 +7,7 @@ import Dashboard from './components/Dashboard';
 import Calendar from './components/Calendar';
 import Github from './components/Github';
 import InternetConnection from './components/InternetConnection';
+import Jira from './components/Jira';
 import Music from './components/Music';
 import Packagist from './components/Packagist';
 import Tasks from './components/Tasks';
@@ -23,6 +24,7 @@ new Vue({
         Calendar,
         Github,
         InternetConnection,
+        Jira,
         Music,
         Packagist,
         Tasks,
@@ -39,12 +41,12 @@ new Vue({
             cluster: window.dashboard.pusherCluster,
         };
 
-        if (window.dashboard.usingNodeServer) {
-            options = {
-                broadcaster: 'socket.io',
-                host: 'http://dashboard.spatie.be:6001',
-            };
-        }
+        // if (window.dashboard.usingNodeServer) {
+        //     options = {
+        //         broadcaster: 'socket.io',
+        //         host: 'http://dashboard.spatie.be:6001',
+        //     };
+        // }
 
         this.echo = new Echo(options);
     },

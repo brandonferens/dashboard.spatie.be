@@ -1,0 +1,22 @@
+.jira__title {
+    color: var(--blue-light);
+    text-transform: uppercase;
+    font-size: var(--font-size-m);
+}
+
+.jira__content {
+    font-size: var(--font-size-s);
+}
+
+
+// .jira__label {
+//     top: .1em;
+//     text-transform: uppercase;
+//     font-size: var(--font-size-s);
+// }
+
+.jira__key {
+    color: var(--yellow);
+    // vertical-align: top;
+    font-weight: var(--font-weight-black);
+}

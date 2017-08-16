@@ -18,6 +18,11 @@
     line-height: 1;
 }
 
+.time-weather__city {
+    text-transform: uppercase;
+    font-size: var(--font-size-s);
+}
+
 .time-weather__date {
     display: none;
     color: var(--gray-light);
