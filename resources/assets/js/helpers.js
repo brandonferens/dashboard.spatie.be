@@ -19,14 +19,14 @@ export function addClassModifiers(base, modifiers = []) {
 }
 
 export function formatDuration(start) {
-    return moment.duration(moment().diff(start), 'milliseconds').format('d[d] h[h] m[m]');
+    let duration = moment.duration(moment().diff(start), 'milliseconds');
+
+     return `${duration.days()}d ${duration.hours()}h ${duration.minutes()}m`;
 }
 
 export function relativeDate(value, allDay = false) {
     const date = moment(value);
     const format = date.minute() === 0 ? 'h a' : 'h:mm a';
-
-    console.log(date.toNow(true));
 
     if (moment().isSame(date, 'd')) {
         if (allDay) {

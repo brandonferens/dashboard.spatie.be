@@ -5,7 +5,8 @@ export default {
         forIn(this.getEventHandlers(), (handler, eventName) => {
             this.$root.echo
                 .private('dashboard')
-                .listen(`.App.Events.${eventName}`, response => handler(response));
+                .listen(`.App.Events.${eventName}`, response => handler(response))
+                .listen(`.Spatie.UptimeMonitor.Events.${eventName}`, response => handler(response));
         });
     },
 };

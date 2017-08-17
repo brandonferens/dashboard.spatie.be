@@ -64,7 +64,7 @@ return [
     |
     */
 
-    'timezone' => 'Europe/Brussels',
+    'timezone' => 'America/Los_Angeles',
 
     /*
     |--------------------------------------------------------------------------
@@ -168,15 +168,16 @@ return [
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         App\Providers\BroadcastServiceProvider::class,
+        App\Providers\CollectionServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        Spatie\Tail\TailServiceProvider::class,
-        Spatie\GoogleCalendar\GoogleCalendarServiceProvider::class,
-        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
-        App\Providers\CollectionServiceProvider::class,
-        Spatie\BladeJavaScript\BladeJavaScriptServiceProvider::class,
-        Spatie\LaravelTwitterStreamingApi\TwitterStreamingApiServiceProvider::class,
         App\Services\GitHub\GitHubServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Spatie\BladeJavaScript\BladeJavaScriptServiceProvider::class,
+        Spatie\GoogleCalendar\GoogleCalendarServiceProvider::class,
+        Spatie\LaravelTwitterStreamingApi\TwitterStreamingApiServiceProvider::class,
+        Spatie\Tail\TailServiceProvider::class,
+        Spatie\UptimeMonitor\UptimeMonitorServiceProvider::class,
     ],
 
     /*

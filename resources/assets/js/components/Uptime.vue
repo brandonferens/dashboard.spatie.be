@@ -56,6 +56,7 @@
             getEventHandlers() {
                 return {
                     'Uptime.UptimeCheckFailed': response => {
+                        console.log(response);
                         this.add(response.url, response.startedFailingAt);
                     },
                     'Uptime.UptimeCheckRecovered': response => {
