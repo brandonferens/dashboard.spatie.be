@@ -5,7 +5,7 @@
 @javascript(compact('pusherKey', 'pusherCluster', 'usingNodeServer'))
 
 <dashboard id="dashboard" columns="4" rows="3">
-    <calendar position="a1:a2"></calendar>
+    <ics-calendar position="a1:a2"></ics-calendar>
     <music position="b1:c1"></music>
     <uptime position="a3"></uptime>
 

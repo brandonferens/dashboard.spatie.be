@@ -12,7 +12,7 @@ class UpdateDashboard extends Command
 
     public function handle()
     {
-        $this->call('dashboard:fetch-calendar-events');
+        $this->call('dashboard:fetch-ics-calendar-events');
         $this->call('dashboard:send-heartbeat');
         $this->call('dashboard:fetch-current-track');
         $this->call('dashboard:fetch-issues');

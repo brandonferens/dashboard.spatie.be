@@ -13,6 +13,7 @@
         "erusev/parsedown": "^1.6",
         "fennb/phirehose": "^1.0",
         "guzzlehttp/guzzle": "^6.2",
+        "johngrogg/ics-parser": "^2.0",
         "knplabs/github-api": "^2.4",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",

@@ -14,6 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         \App\Console\Components\Calendar\FetchCalendarEvents::class,
+        \App\Console\Components\Calendar\FetchIcsCalendarEvents::class,
         \App\Console\Components\GitHub\FetchTotals::class,
         \App\Console\Components\InternetConnection\SendHeartbeat::class,
         \App\Console\Components\Music\FetchCurrentTrack::class,
@@ -28,7 +29,7 @@ class Kernel extends ConsoleKernel
 
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('dashboard:fetch-calendar-events')->everyMinute();
+        $schedule->command('dashboard:fetch-ics-calendar-events')->everyMinute();
         $schedule->command('dashboard:fetch-current-track')->everyMinute();
         $schedule->command('dashboard:send-heartbeat')->everyMinute();
         $schedule->command('dashboard:fetch-issues')->everyFiveMinutes();

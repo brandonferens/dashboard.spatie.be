@@ -22,19 +22,32 @@ export function formatDuration(start) {
     return moment.duration(moment().diff(start), 'milliseconds').format('d[d] h[h] m[m]');
 }
 
-export function relativeDate(value) {
+export function relativeDate(value, allDay = false) {
     const date = moment(value);
+    const format = date.minute() === 0 ? 'h a' : 'h:mm a';
+
+    console.log(date.toNow(true));
 
     if (moment().isSame(date, 'd')) {
-        return 'Today';
+        if (allDay) {
+            return 'Today all day';
+        }
+
+        return 'Today at ' + date.format(format);
     }
 
     if (moment().add(1, 'day').isSame(date, 'd')) {
-        return 'Tomorrow';
+        if (allDay) {
+            return 'Tomorrow all day';
+        }
+
+        return 'Tomorrow at ' + date.format(format);
     }
 
     if (date.isBetween(moment().add(1, 'day'), moment().add(8, 'days'), 'day')) {
-        return date.format('dddd');
+        let allDayText = allDay ? 'all day' : '';
+
+        return `${date.format('dddd')} ${allDayText}`;
     }
 
     return 'In ' + date.toNow(true);
