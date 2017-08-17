@@ -33,6 +33,6 @@ class Kernel extends ConsoleKernel
         $schedule->command('dashboard:fetch-current-track')->everyMinute();
         $schedule->command('dashboard:send-heartbeat')->everyMinute();
         $schedule->command('dashboard:fetch-issues')->everyFiveMinutes();
-        $schedule->command('monitor:check-uptime')->everyFiveMinutes();
+        $schedule->command('monitor:check-uptime')->everyMinute();
     }
 }
