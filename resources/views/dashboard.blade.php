@@ -10,13 +10,13 @@
     <uptime position="a3"></uptime>
 
     <jira team-member="brandon" position="b2"></jira>
-    <jira team-member="robin" position="c2"></jira>
-    <jira team-member="steph" position="b3"></jira>
-    <jira team-member="dustin" position="c3"></jira>
+    <jira team-member="steph" position="c2"></jira>
+    <jira team-member="justin" position="b3"></jira>
+    <jira team-member="nick" position="c3"></jira>
 
     <time-weather position="d1" date-format="ddd M/D"></time-weather>
-    <time-weather position="d2" date-format="ddd M/D" city="San Diego"></time-weather>
-    <time-weather position="d3" date-format="ddd M/D" city="Boston" timezone="America/New_York"></time-weather>
+    <time-weather position="d2" date-format="ddd M/D" city="Boston" timezone="America/New_York"></time-weather>
+    <time-weather position="d3" date-format="ddd M/D" city="Detroit" timezone="America/Detroit"></time-weather>
 
     <!-- <internet-connection></internet-connection> -->
 </dashboard>
